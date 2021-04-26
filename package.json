@@ -1,0 +1,25 @@
+{
+  "name": "xrk",
+  "smallVersion": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@antv/f2": "^3.7.7",
+    "dayjs": "^1.9.3",
+    "qs": "^6.9.4",
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^1.5.5",
+    "uni-ui": "^1.0.0",
+    "uview-ui": "^1.8.4"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
+    "install": "^0.13.0"
+  }
+}

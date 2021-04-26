@@ -1,0 +1,1144 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+		"^s-(.*)": "@/pages/components/s-$1/s-$1.vue"
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"name": "index",
+			"meta": {
+				"title": "首页",
+				"rule": "store_index",
+				"requiresAuth": true, //判断权限
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "葵花市场",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/choiceness/choiceness",
+			"name": "choiceness",
+			"meta": {
+				"title": "精选品牌",
+				"rule": "store_indexchoiceness",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "精选品牌",
+				"enablePullDownRefresh": true,
+				"backgroundColorTop": "#EEEEEE",
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/member/index",
+			"name": "member",
+			"meta": {
+				"title": "会员",
+				"rule": "store_memberindex",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "会员中心",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#212121",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/shopping/index",
+			"name": "shopping",
+			"meta": {
+				"title": "购物车",
+				"rule": "store_shoppingindex",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"name": "my",
+			"meta": {
+				"title": "我的",
+				"rule": "store_myindex",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/order/myOrder",
+			"name": "myOrder",
+			"meta": {
+				"title": "我的订单",
+				"rule": "store_myorder",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/order/orderDetails",
+			"name": "orderDetails",
+			"meta": {
+				"title": "订单详情",
+				"rule": "store_myorderdetails",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/order/orderSettlement",
+			"name": "orderSettlement",
+			"meta": {
+				"title": "订单结算",
+				"rule": "store_myordersettlement",
+				"requiresAuth": true,
+				"authorization": true //判断授权 true要  false不要
+			},
+			"style": {
+				"navigationBarTitleText": "订单结算",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/order/orderRefund",
+			"name": "orderRefund",
+			"meta": {
+				"title": "我要退款",
+				"rule": "store_myorderrefund",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "我要退款",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/order/orderType",
+			"name": "orderType",
+			"meta": {
+				"title": "售后类型",
+				"rule": "store_myordertype",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "售后类型",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/order/selectProduct",
+			"name": "selectProduct",
+			"meta": {
+				"title": "请选择退款商品",
+				"rule": "store_myselectproduct",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "请选择退款商品",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/order/batchRefund",
+			"name": "batchRefund",
+			"meta": {
+				"title": "批量退款",
+				"rule": "store_mybatchrefund",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "批量退款",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/coupons/myCoupons",
+			"name": "myCoupons",
+			"meta": {
+				"title": "我的优惠劵",
+				"rule": "store_mycoupons",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "我的优惠劵",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/coupons/purchaseCoupons",
+			"name": "purchaseCoupons",
+			"meta": {
+				"title": "购买跳优惠劵",
+				"rule": "store_purchasecoupons",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "购买跳优惠劵",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/after/afterOrder",
+			"name": "afterOrder",
+			"meta": {
+				"title": "售后订单",
+				"rule": "store_myafterorder",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "售后订单",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/after/afterDetails",
+			"name": "afterDetails",
+			"meta": {
+				"title": "服务单详情",
+				"rule": "store_myafterdetails",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "服务单详情",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/after/consultDetails",
+			"name": "consultDetails",
+			"meta": {
+				"title": "协商详情",
+				"rule": "store_myconsultDetails",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "协商详情",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/newest/newest",
+			"meta": {
+				"title": "最新到货",
+				"rule": "store_indexnewest",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "最新到货",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/hotRanking/hotRanking",
+			"meta": {
+				"title": "热销榜单",
+				"rule": "store_indexhotranking",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "热销榜单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/welfareGo/welfareGo",
+			"meta": {
+				"title": "欢乐福利GO",
+				"rule": "store_indexwelfarego",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "欢乐福利GO",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/seeding/seeding",
+			"meta": {
+				"title": "种草专场",
+				"rule": "store_indexseeding",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "种草专场",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/goods/goods",
+			"meta": {
+				"title": "商品详情",
+				"rule": "store_indexgoods",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/search/search",
+			"meta": {
+				"title": "搜索",
+				"rule": "store_indexsearch",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/searchResult/searchResult",
+			"meta": {
+				"title": "搜索结果",
+				"rule": "store_indexsearchresult",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "搜索结果",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/brand/brand",
+			"meta": {
+				"title": "精选品牌",
+				"rule": "store_indexbrand",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "精选品牌",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/login/login/login",
+			"meta": {
+				"title": "葵花市场",
+				"rule": "store_mylogin",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权 登录页
+			},
+			"style": {
+				"navigationBarTitleText": "葵花市场",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/login/inviteCode/inviteCode",
+			"meta": {
+				"title": "邀请码",
+				"rule": "store_myregister",
+				"requiresAuth": true,
+				"authorization": false //判断是否授权 邀请码
+			},
+			"style": {
+				"navigationBarTitleText": "输入邀请码",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/seedingList/seedingList",
+			"meta": {
+				"title": "种草专场",
+				"rule": "store_myseedinglist",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "种草专场",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/shopping/product/shoppingCart",
+			"meta": {
+				"title": "购物车",
+				"rule": "store_shoppingcart",
+				"requiresAuth": true,
+				"authorization": true //判断是否授权
+			},
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/index/webView/webView",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+    ],
+	// 分包
+	"subPackages": [{
+			"root": "settings",
+			"pages": [{
+					"path": "personal/setUp",
+					"name": "setUp",
+					"meta": {
+						"title": "设置",
+						"rule": "store_mysetup",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "设置",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/personal",
+					"name": "personal",
+					"meta": {
+						"title": "个人信息",
+						"rule": "store_mypersonal",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "个人信息",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/aboutUs",
+					"name": "aboutUs",
+					"meta": {
+						"title": "关于我们",
+						"rule": "store_myaboutus",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "关于我们",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/aboutComm",
+					"name": "aboutComm",
+					"meta": {
+						"title": "共用协议",
+						"rule": "store_myaboutcomm",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "共用协议",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/nickName",
+					"name": "nickName",
+					"meta": {
+						"title": "修改昵称",
+						"rule": "store_mynickName",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "修改昵称",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/paymentSettings",
+					"name": "paymentSettings",
+					"meta": {
+						"title": "支付设置",
+						"rule": "store_mypaymentsettings",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "支付设置",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/setPassword",
+					"name": "setPassword",
+					"meta": {
+						"title": "设置密码",
+						"rule": "store_mysetpassword",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "设置密码",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/verifyPassword",
+					"name": "verifyPassword",
+					"meta": {
+						"title": "验证密码",
+						"rule": "store_myverifypassword",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "验证密码",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "bank/bankCardList",
+					"name": "bankCardList",
+					"meta": {
+						"title": "银行卡列表",
+						"rule": "store_mybankcardlist",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "银行卡列表",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "bank/addBankCard",
+					"name": "addBankCard",
+					"meta": {
+						"title": "新增银行卡",
+						"rule": "store_myaddbankcard",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "新增银行卡",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "bank/phoneTest",
+					"name": "phoneTest",
+					"meta": {
+						"title": "验证手机号",
+						"rule": "store_myphonetest",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "验证手机号",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "address/addressSet",
+					"name": "addressSet",
+					"meta": {
+						"title": "地址管理",
+						"rule": "store_mysettingsaddressSet",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "地址管理",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "address/addAddress",
+					"name": "addAddress",
+					"meta": {
+						"title": "添加地址",
+						"rule": "store_mysettingsaddaddress",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "添加地址",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "real/realName",
+					"name": "realName",
+					"meta": {
+						"title": "实名认证",
+						"rule": "store_mysettingsrealname",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "实名认证",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "payment/paymentSuccessful",
+					"name": "paymentSuccessful",
+					"meta": {
+						"title": "支付成功",
+						"rule": "store_paymentsuccessful",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "支付成功",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "payment/paymentPlatform",
+					"name": "paymentPlatform",
+					"meta": {
+						"title": "支付收银台",
+						"rule": "store_paymentplatform",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "支付收银台",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "personal/sharePage",
+					"name": "sharePage",
+					"meta": {
+						"title": "",
+						"rule": "store_sharepage",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "opinion/feedBack",
+					"name": "feedBack",
+					"meta": {
+						"title": "意见反馈",
+						"rule": "store_feedback",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "意见反馈",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "opinion/feedType",
+					"name": "feedType",
+					"meta": {
+						"title": "选择反馈类型",
+						"rule": "store_feedtype",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "选择反馈类型",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/logisticsNews",
+					"name": "logisticsNews",
+					"meta": {
+						"title": "物流信息",
+						"rule": "store_mylogisticsnews",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "物流信息",
+						"navigationStyle": "custom" // 隐藏系统导航栏
+					}
+				},
+				{
+					"path": "message/multipleNews",
+					"name": "multipleNews",
+					"meta": {
+						"title": "物流信息",
+						"rule": "store_mymultiplenews",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "物流信息",
+						"navigationStyle": "custom" // 隐藏系统导航栏
+					}
+				},
+				{
+					"path": "message/expressNotice",
+					"meta": {
+						"title": "物流通知",
+						"rule": "store_myexpressnotice",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "物流通知",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/incomeNotice",
+					"meta": {
+						"title": "收入通知",
+						"rule": "store_myincomenotice",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "收入通知",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/messageCenter",
+					"meta": {
+						"title": "消息中心",
+						"rule": "store_mymessagecenter",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "消息中心",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/messageDetail",
+					"meta": {
+						"title": "消息详情",
+						"rule": "store_mymessagedetail",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "消息详情",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/messageNotice",
+					"meta": {
+						"title": "消息通知",
+						"rule": "store_mymessagenotice",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "消息通知",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/remindRecord",
+					"meta": {
+						"title": "提醒记录",
+						"rule": "store_myremindrecord",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "提醒记录",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "message/smartRemind",
+					"meta": {
+						"title": "智能提醒",
+						"rule": "store_mysmartremind",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "智能提醒",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "collection/myCollection",
+					"name": "myCollection",
+					"meta": {
+						"title": "我的收藏",
+						"rule": "store_mycollection",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "我的收藏",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "coupons/centerCoupons",
+					"name": "centerCoupons",
+					"meta": {
+						"title": "领劵中心",
+						"rule": "store_mycenterCoupons",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "领劵中心",
+						"navigationStyle": "custom", // 隐藏系统导航栏
+						"enablePullDownRefresh": true
+					}
+				}
+			]
+		},
+		{
+			"root": "agency",
+			"pages": [{
+					"path": "order/order",
+					"meta": {
+						"title": "零售订单管理",
+						"rule": "store_orderindex",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "零售订单管理",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "orderRefund/orderRefund",
+					"meta": {
+						"title": "售后订单管理",
+						"rule": "store_orderrefund",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "售后订单管理",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "orderDetail/orderDetail",
+					"meta": {
+						"title": "订单详情",
+						"rule": "store_orderdetail",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "refundDetail/refundDetail",
+					"meta": {
+						"title": "退款单详情",
+						"rule": "store_orderdetail",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "售后服务订单详情",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "talkDetail/talkDetail",
+					"meta": {
+						"title": "协商详情",
+						"rule": "store_talkdetail",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "协商详情",
+						"enablePullDownRefresh": false
+					}
+
+				},
+				{
+					"path": "earningsDetail/earningsDetail",
+					"meta": {
+						"title": "收益详情",
+						"rule": "store_memberearningsdetail",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "收益详情",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "extractApply/extractApply",
+					"meta": {
+						"title": "申请提现",
+						"rule": "store_memberextractapply",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "申请提现",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "extracted/extracted",
+					"meta": {
+						"title": "已提现",
+						"rule": "store_memberextracted",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "已提现",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "extracting/extracting",
+					"meta": {
+						"title": "提现中",
+						"rule": "store_memberextracting",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "提现中",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "growUp/growUp",
+					"meta": {
+						"title": "成长值",
+						"rule": "store_membergrowUp",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "成长值",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "joinMember/joinMember",
+					"meta": {
+						"title": "加入会员",
+						"rule": "store_memberjoinmember",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "加入会员",
+						"navigationBarTextStyle": "white",
+						"navigationBarBackgroundColor": "#212121",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "levelExplain/levelExplain",
+					"meta": {
+						"title": "等级说明",
+						"rule": "store_memberlevelexplain",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "等级说明",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "myIncome/myIncome",
+					"meta": {
+						"title": "我的收入",
+						"rule": "store_membermyincome",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "我的收入",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "openAgency/openAgency",
+					"meta": {
+						"title": "开通代理",
+						"rule": "store_memberopenagency",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "开通代理",
+						"navigationBarTextStyle": "white",
+						"navigationBarBackgroundColor": "#212121",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "becomeDealer/becomeDealer",
+					"meta": {
+						"title": "成为经销商",
+						"rule": "store_memberbecomedealer",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "成为经销商",
+						"navigationBarTextStyle": "white",
+						"navigationBarBackgroundColor": "#212121",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "extendMember/extendMember",
+					"meta": {
+						"title": "推广会员",
+						"rule": "store_memberextendmember",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+					"style": {
+						"navigationBarTitleText": "推广会员",
+						"enablePullDownRefresh": false
+					}
+
+				}
+			    ,{
+                    "path" : "failedOrder/failedOrder",
+					"meta": {
+						"title": "未成功订单",
+						"rule": "store_memberfailedorder",
+						"requiresAuth": true,
+						"authorization": true //判断是否授权
+					},
+                    "style" : {
+						"navigationBarTitleText": "未成功订单",
+						"enablePullDownRefresh": false
+					}
+                
+                }
+            ]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"color": "#666666",
+		"selectedColor": "#212121",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/home.png",
+				"selectedIconPath": "static/images/homed.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/member/index",
+				"iconPath": "static/images/member.png",
+				"selectedIconPath": "static/images/membered.png",
+				"text": "会员"
+			},
+			{
+				"pagePath": "pages/shopping/index",
+				"iconPath": "static/images/cart.png",
+				"selectedIconPath": "static/images/carted.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"iconPath": "static/images/my.png",
+				"selectedIconPath": "static/images/myed.png",
+				"text": "我的"
+			}
+		]
+	}
+}
